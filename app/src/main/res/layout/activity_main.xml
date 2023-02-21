@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ff000000"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TopText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="end|bottom"
+        android:text="@string/Zero"
+        android:textColor="@color/white"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35"
+        app:layout_constraintTop_toBottomOf="@id/TopText"/>
+
+    <Button
+        android:id="@+id/AC"
+        android:text="@string/AC"
+        android:textSize="40sp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/lightgrey_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/PlusMinus"
+        app:layout_constraintBottom_toTopOf="@id/Seven"
+        app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+    <Button
+        android:id="@+id/PlusMinus"
+        android:text="@string/PlusMinus"
+        android:textSize="40sp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/lightgrey_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toRightOf="@id/AC"
+        app:layout_constraintRight_toLeftOf="@id/PercentSign"
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        app:layout_constraintBottom_toTopOf="@id/Eight"/>
+
+    <Button
+        android:id="@+id/PercentSign"
+        android:text="@string/PercentSign"
+        android:textSize="40sp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/lightgrey_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toRightOf="@id/PlusMinus"
+        app:layout_constraintRight_toLeftOf="@id/Divide"
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        app:layout_constraintBottom_toTopOf="@id/Nine" />
+
+    <Button
+        android:id="@+id/Divide"
+        android:text="@string/Divide"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/orange_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toRightOf="@id/PercentSign"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        app:layout_constraintBottom_toTopOf="@id/Multiply"/>
+
+    <Button
+        android:id="@+id/Seven"
+        android:text="@string/Seven"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/darkgrey_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/Eight"
+        app:layout_constraintBottom_toTopOf="@id/Four"
+        app:layout_constraintTop_toBottomOf="@+id/AC" />
+
+    <Button
+        android:id="@+id/Eight"
+        android:text="@string/Eight"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/darkgrey_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintBottom_toTopOf="@id/Five"
+        app:layout_constraintRight_toLeftOf="@id/Nine"
+        app:layout_constraintLeft_toRightOf="@id/Seven"
+        app:layout_constraintTop_toBottomOf="@+id/PlusMinus" />
+
+    <Button
+        android:id="@+id/Nine"
+        android:text="@string/Nine"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/darkgrey_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toRightOf="@id/Eight"
+        app:layout_constraintRight_toLeftOf="@id/Multiply"
+        app:layout_constraintBottom_toTopOf="@id/Six"
+        app:layout_constraintTop_toBottomOf="@+id/PercentSign" />
+
+    <Button
+        android:id="@+id/Multiply"
+        android:text="@string/Multiply"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/orange_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toRightOf="@id/Nine"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/Minus"
+        app:layout_constraintTop_toBottomOf="@id/Divide" />
+
+    <Button
+        android:id="@+id/Four"
+        android:text="@string/Four"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/darkgrey_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintBottom_toTopOf="@id/One"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/Five"
+        app:layout_constraintTop_toBottomOf="@+id/Seven" />
+
+    <Button
+        android:id="@+id/Five"
+        android:text="@string/Five"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/darkgrey_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toRightOf="@id/Four"
+        app:layout_constraintRight_toLeftOf="@id/Six"
+        app:layout_constraintBottom_toTopOf="@id/Two"
+        app:layout_constraintTop_toBottomOf="@+id/Eight" />
+
+    <Button
+        android:id="@+id/Six"
+        android:text="@string/Six"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/darkgrey_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toRightOf="@id/Five"
+        app:layout_constraintRight_toLeftOf="@id/Minus"
+        app:layout_constraintTop_toBottomOf="@+id/Nine"
+        app:layout_constraintBottom_toTopOf="@id/Three"/>
+
+    <Button
+        android:id="@+id/Minus"
+        android:text="@string/Minus"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/orange_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toRightOf="@id/Six"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Multiply"
+        app:layout_constraintBottom_toTopOf="@id/Plus"/>
+
+
+    <Button
+        android:id="@+id/One"
+        android:text="@string/One"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/darkgrey_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/Two"
+        app:layout_constraintTop_toBottomOf="@+id/Four"
+        app:layout_constraintBottom_toTopOf="@id/guideline2" />
+
+    <Button
+        android:id="@+id/Two"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="@string/Two"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:background="@drawable/darkgrey_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toRightOf="@id/One"
+        app:layout_constraintRight_toLeftOf="@id/Three"
+        app:layout_constraintTop_toBottomOf="@+id/Five"
+        app:layout_constraintBottom_toTopOf="@id/guideline2" />
+
+    <Button
+        android:id="@+id/Three"
+        android:text="@string/Three"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/darkgrey_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toRightOf="@id/Two"
+        app:layout_constraintRight_toLeftOf="@id/Plus"
+        app:layout_constraintTop_toBottomOf="@+id/Six"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"/>
+
+    <Button
+        android:id="@+id/Plus"
+        android:text="@string/Plus"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/orange_button"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toRightOf="@id/Three"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Minus"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.87"/>
+
+    <Button
+        android:id="@+id/Zero"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="@string/Zero"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:background="@drawable/darkgrey_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/Decimal"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/Decimal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="@string/Decimal"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:background="@drawable/darkgrey_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintRight_toLeftOf="@id/Equal"
+        app:layout_constraintLeft_toRightOf="@id/Zero"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/Equal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="@string/Equal"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:background="@drawable/orange_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="0.25"
+        app:layout_constraintVertical_weight="0.13"
+        app:layout_constraintLeft_toRightOf="@id/Decimal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
